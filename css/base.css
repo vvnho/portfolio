@@ -46,6 +46,7 @@ div {
 a {
 	color: #BE1E20;
 	text-decoration: none;
+	cursor: crosshair;
 }
 
 a:hover {
