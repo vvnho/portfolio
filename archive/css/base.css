@@ -1,0 +1,210 @@
+*{ 
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+::selection {
+	background: #4d4d4d;
+	color: #FEFFEE;
+}
+
+nav {
+	float: top;
+	left: 0;
+	position: fixed;
+	z-index: 999;
+	width: 180px;
+	height: 100%;
+	padding-left: 25px;
+	padding-top: 50px;
+	color: #BE1E20;
+	border-right: 1px dashed #BE1E20;
+}
+
+nav h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	color: #BE1E20;
+	padding-top: 15px;
+	padding-bottom: 60px;
+	border-bottom: none;
+}
+
+nav a {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	color: #BE1E20;
+	text-decoration: none;
+}
+
+nav a:hover, #active{
+	border-bottom: 1px dashed #BE1E20;
+}
+
+nav h2 {
+	padding-bottom: 10px;
+}
+
+nav h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #BE1E20;
+}
+
+body {
+	margin: 0 auto;
+	background-color: #FEFFEE;
+}
+
+header {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	color: #BE1E20;	
+	border-bottom: 1px dashed #BE1E20;
+	padding-top: 50px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+/***ISOTOPE***/
+#container {
+	margin: 0 auto;
+	padding-left: 200px;
+	width: 930px;
+	margin-bottom: 50px;
+}
+
+.item {
+	position: relative;
+	padding: 60px 30px 0 30px;
+	display: block;
+	height: 250px;
+	width: 250px;
+	overflow: hidden;
+}
+
+/*** OVERLAY COLOR 
+http://callmenick.com/2014/03/06/image-overlay-hover-effects-with-css3-transitions/ 
+***/
+.item a { 
+	display: block; 
+	height: 250px; 
+	width: 250px; 
+	overflow: hidden; 
+	text-decoration: none;
+}
+
+.item img { 
+	height: 250px;
+	width: 250px;
+	opacity: 1;
+}
+
+.item .overlay { 
+	height: 250px;
+	width: 250px;
+	display: block;
+	position: absolute;
+	z-index: 20;
+	background: rgba(77, 77, 77, 0.8);
+	overflow: hidden;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-top: 60px;
+	margin-left: 30px;
+}
+
+.item div h3 {
+	height: 60px;
+	font-family: 'Raleway', sans-serif;
+	color: #FEFFEE;
+	font-weight: 700;
+	font-size: 24px;
+	padding: 10px;
+	padding-top: 40px;
+}
+
+.item div ul{
+	list-style-type: none;
+	padding: 10px;
+}
+
+.longlist {
+	margin-top: 85px;
+}
+.shortlist {
+	margin-top: 105px;
+}
+
+.item div li {
+	font-family: 'Raleway', sans-serif;
+	color: #FEFFEE;
+	font-weight: 400;
+	font-size: 18px;	
+}
+
+/* ============================================================
+  EFFECT 6 - ICON BOUNCE IN
+============================================================ */
+#effect-6 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#effect-6 .overlay h3{
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#effect-6 .img.hover .overlay {
+  opacity: 1;
+}
+#effect-6 .img.hover .overlay h3 {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
+}
+
+/*** EMAIL FOOTER ***/
+footer {
+	position: fixed;
+	display: block;
+	left: 25px;
+	bottom: 10px;
+	z-index: 1500;
+}
+
+#emailnav{
+	background-image: url('../images/emailnav.gif');
+	height: 50px;
+	width: 30px;
+	background-position: 29.25px 0px;
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 0px;
+	z-index: 1500;
+}
+
+#emailnav:hover {
+	background-position: -0.75px 0px;
+}

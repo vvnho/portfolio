@@ -1,0 +1,481 @@
+/*SLIDESHOW*/
+#gallery {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery a img {
+		border:none;
+	}
+	
+	#gallery a.show {
+		z-index:500;
+	}
+
+	#gallery .caption {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery .caption .cont {
+		margin:5px;
+	}
+	
+	#gallery .caption .cont h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide2*/
+#gallery2 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery2 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery2 a img {
+		border:none;
+	}
+	
+	#gallery2 a.show2 {
+		z-index:500;
+	}
+
+	#gallery2 .caption2 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery2 .caption2 .cont2 {
+		margin:5px;
+	}
+	
+	#gallery2 .caption2 .cont2 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide3*/
+#gallery3 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery3 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery3 a img {
+		border:none;
+	}
+	
+	#gallery3 a.show3 {
+		z-index:500;
+	}
+
+	#gallery3 .caption3 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery3 .caption3 .cont3 {
+		margin:5px;
+	}
+	
+	#gallery3 .caption3 .cont3 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide4*/
+#gallery4 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery4 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery4 a img {
+		border:none;
+	}
+	
+	#gallery4 a.show4 {
+		z-index:500;
+	}
+
+	#gallery4 .caption4 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery4 .caption4 .cont4 {
+		margin:5px;
+	}
+	
+	#gallery4 .caption4 .cont4 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+
+/*OLSON PIC*/
+#olsonpic {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-top: 275px;
+}
+	
+/*slide5*/
+#gallery5 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery5 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery5 a img {
+		border:none;
+	}
+	
+	#gallery5 a.show5 {
+		z-index:500;
+	}
+
+	#gallery5 .caption5 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery5 .caption5 .cont5 {
+		margin:5px;
+	}
+	
+	#gallery5 .caption5 .cont5 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide6*/
+#gallery6 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery6 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery6 a img {
+		border:none;
+	}
+	
+	#gallery6 a.show6 {
+		z-index:500;
+	}
+
+	#gallery6 .caption6 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery6 .caption6 .cont6 {
+		margin:5px;
+	}
+	
+	#gallery6 .caption6 .cont6 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide7*/
+#gallery7 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery7 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery7 a img {
+		border:none;
+	}
+	
+	#gallery7 a.show7 {
+		z-index:500;
+	}
+
+	#gallery7 .caption7 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery7 .caption7 .cont7 {
+		margin:5px;
+	}
+	
+	#gallery7 .caption7 .cont7 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+	/*slide8*/
+	#gallery8 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery8 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery8 a img {
+		border:none;
+	}
+	
+	#gallery8 a.show8 {
+		z-index:500;
+	}
+
+	#gallery8 .caption8 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery8 .caption8 .cont8 {
+		margin:5px;
+	}
+	
+	#gallery8 .caption8 .cont8 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide 9*/
+#gallery9 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery9 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery9 a img {
+		border:none;
+	}
+	
+	#gallery9 a.show9 {
+		z-index:500;
+	}
+
+	#gallery9 .caption9 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery9 .caption9 .cont9 {
+		margin:5px;
+	}
+	
+	#gallery9 .caption9 .cont9 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+	
+/*slide 10*/
+#gallery10 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery10 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery10 a img {
+		border:none;
+	}
+	
+	#gallery10 a.show10 {
+		z-index:500;
+	}
+
+	#gallery10 .caption10 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery10 .caption10 .cont10 {
+		margin:5px;
+	}
+	
+	#gallery10 .caption10 .cont10 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}
+
+	
+/*slide11*/
+#gallery11 {
+	position:relative;
+	height:360px;
+	width: 500px;
+	margin-left: 280px;
+	margin-top: 275px;
+}
+	#gallery11 a {
+		float:left;
+		position:absolute;
+	}
+	
+	#gallery11 a img {
+		border:none;
+	}
+	
+	#gallery11 a.show11 {
+		z-index:500;
+	}
+
+	#gallery11 .caption11 {
+		z-index:600; 
+		background-color: #3A2717; 
+		color: #78B3A4; 
+		height:100px; 
+		width:100%; 
+		position:absolute;
+		bottom:0;
+	}
+
+	#gallery11 .caption11 .cont11 {
+		margin:5px;
+	}
+	
+	#gallery11 .caption11 .cont11 h3 {
+		margin:0;
+		padding:0;
+		float: right;
+		padding-right: 10px;
+		color: #78B3A4;
+	}

@@ -1,0 +1,91 @@
+body {
+	height: 900px;
+	}
+
+
+.wrapper{
+	width:90%;
+	font-family: 'roboto', sans-serif;
+
+}
+
+#form1 {
+		max-width:  310px;
+		margin-top: 20px;
+		margin-left: 230px;
+		}
+
+#form2 {
+		max-width:  315px;
+		margin-left: 230px;
+		}
+		
+.howdonate {
+	margin-top: 7px;
+	margin-left: 0px;
+	margin-bottom: -10x;
+	font-size: 13px;
+	}
+
+button{
+	padding:5px;
+	margin-top:10px;
+	background-color: white;
+}
+#test{
+	width: 40%;
+
+	min-width:600px;
+}
+#test p{
+	font-size:13px;
+}
+input[type=text]{
+	display:block;
+	border: 1px solid #00b4a4;
+	width:300px;
+	height: 25px;
+	color: #b2b2b2;
+	margin-top:10px;
+	padding-left:10px;
+}
+
+
+h3 {
+    font-family: 'texgyreadventorbold';
+	color: #00b4a4;
+	margin-top: 125px;
+	margin-left: 230px;
+	font-size: 30px;
+	min-width: 500px;
+	}
+	
+	
+h4{	font-family: 'texgyreadventorbold';
+    color: #2b2a2a;
+	margin-left: 230px;
+	font-size: 20px;
+	}
+
+#donatetop {
+		margin-top: 65px;
+	}
+		
+p { margin-top: 0px;
+	max-width: 300px;
+	margin-bottom: 0px;
+}
+
+.involve a{
+    display: inline-block;
+	text-decoration: none;
+    color: #bd202e;
+
+	}
+	
+.involve a:hover {
+	color:#bd202e; 
+	}
+	
+
+	

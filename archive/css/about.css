@@ -1,0 +1,77 @@
+/***ABOUT PAGE***/
+
+a {
+	color: #BE1E20;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+
+#inner {
+	margin-top: 50px;
+}
+
+#leftcolumn {
+	width: 560px;
+	float: left;
+}
+
+#rightcolumn {
+	width: 250px; 
+	float: right;
+}
+
+#rowicons td {
+	padding: 0 20px;
+}
+
+.sicons {
+	height: 50px;
+	width: 50px;
+	background-position: 50px 0px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#email {
+	background-image: url('../images/email.gif');
+	
+}
+
+#linkedin {
+	background-image: url('../images/linkedin.gif');
+}
+
+#behance {
+	background-image: url('../images/behance.gif');
+}
+
+#cv {
+	background-image: url('../images/resume.gif');
+}
+
+#dribbble {
+	background-image: url('../images/dribbble.gif');
+}
+
+#instagram {
+	background-image: url('../images/instagram.gif');
+}
+
+#email:hover, #linkedin:hover, #behance:hover, #cv:hover, #dribbble:hover, #instagram:hover{
+	background-position: 0px 0px;
+}
+
+.caption{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #BE1E20;
+	text-align: center;
+}
+
+#ecap, #ccap, #lcap, #bcap, #dcap, #icap {
+	visibility: hidden;
+}

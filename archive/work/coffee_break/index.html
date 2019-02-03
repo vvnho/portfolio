@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<meta charset = "UTAF-8"/>
+		
+		<title>
+			Coffee Break | Explore-It!
+		</title>
+	
+		<link rel = stylesheet href = "css/style-coffee.css">
+		<link rel = stylesheet href = "css/gallery.css">
+		
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type='text/javascript' src='js/jquery.scrollTo-min.js'></script>
+	<script type='text/javascript' src='js/jquery.localscroll-min.js'></script>
+
+	<script>
+		//scroll
+		$(function( $ ){
+		$.localScroll.defaults.axis = 'yx';
+		$.localScroll.hash({
+			target: '#content', // Could be a selector or a jQuery object too.
+			queue:true,
+			duration:1500
+		});
+		$.localScroll({
+		target: '#content', // could be a selector or a jQuery object too.
+		queue:true,
+		duration:1000,
+		hash:true,
+		onBefore:function( e, anchor, $target ){
+			// The 'this' is the settings object, can be modified
+		},
+		onAfter:function( anchor, settings ){
+			// The 'this' contains the scrolled element (#content)
+		}
+		});
+	});	
+			
+//slideshow
+		$(document).ready(function() {		
+			
+			//Execute the slideShow
+			slideShow();
+
+		});
+
+		function slideShow() {
+
+			//Set the opacity of all images to 0
+			$('#gallery a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery a:first').css({opacity: 1.0});
+			
+			//Set the caption background to semi-transparent
+			$('#gallery .caption').css({opacity: 0.7});
+
+			//Resize the width of the caption according to the image width
+			$('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+			
+			//Get the caption of the first image from REL attribute and display it
+			$('#gallery .cont').html($('#gallery a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
+			setInterval('gallery()',6000);
+			
+		}
+
+		function gallery() {
+			
+			//if no IMGs have the show class, grab the first image
+			var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+
+			//Get next image, if it reached the end of the slideshow, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));	
+			
+			//Get next image caption
+			var caption = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the content
+			$('#gallery .cont').html(caption);
+			
+			
+		}		
+
+//slide2
+		$(document).ready(function() {		
+			
+			//Execute the slideshow2
+			slideshow2();
+
+		});
+
+		function slideshow2() {
+
+			//Set the opacity of all images to 0
+			$('#gallery2 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery2 a:first').css({opacity: 1.0});
+			
+			//Set the caption2 background to semi-transparent
+			$('#gallery2 .caption2').css({opacity: 0.7});
+
+			//Resize the width of the caption2 according to the image width
+			$('#gallery2 .caption2').css({width: $('#gallery2 a').find('img').css('width')});
+			
+			//Get the caption2 of the first image from REL attribute and display it
+			$('#gallery2 .cont2').html($('#gallery2 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery2 function to run the slideshow2, 6000 = change to next image after 6 seconds
+			setInterval('gallery2()',6000);
+			
+		}
+
+		function gallery2() {
+	
+	//if no IMGs have the show2 class, grab the first image
+	var current = ($('#gallery2 a.show2')?  $('#gallery2 a.show2') : $('#gallery2 a:first'));
+
+	//Get next image, if it reached the end of the slideshow2, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('caption2'))? $('#gallery2 a:first') :current.next()) : $('#gallery2 a:first'));	
+	
+	//Get next image caption2
+	var caption2 = next.find('img').attr('rel');	
+	
+	//Set the fade in effect for the next image, show2 class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show2')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show2');
+	
+	//Set the opacity to 0 and height to 1px
+	$('#gallery2 .caption2').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+	
+	//Animate the caption2, opacity to 0.7 and heigth to 100px, a slide up effect
+	$('#gallery2 .caption2').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+	
+	//Display the cont2
+	$('#gallery2 .cont2').html(caption2);
+	
+	
+}
+
+
+//slide3
+		$(document).ready(function() {		
+			
+			//Execute the slideshow3
+			slideshow3();
+
+		});
+
+		function slideshow3() {
+
+			//Set the opacity of all images to 0
+			$('#gallery3 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery3 a:first').css({opacity: 1.0});
+			
+			//Set the caption3 background to semi-transparent
+			$('#gallery3 .caption3').css({opacity: 0.7});
+
+			//Resize the width of the caption3 according to the image width
+			$('#gallery3 .caption3').css({width: $('#gallery3 a').find('img').css('width')});
+			
+			//Get the caption3 of the first image from REL attribute and display it
+			$('#gallery3 .cont3').html($('#gallery3 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery3 function to run the slideshow3, 6000 = change to next image after 6 seconds
+			setInterval('gallery3()',6000);
+			
+		}
+
+		function gallery3() {
+	
+	//if no IMGs have the show3 class, grab the first image
+	var current = ($('#gallery3 a.show3')?  $('#gallery3 a.show3') : $('#gallery3 a:first'));
+
+	//Get next image, if it reached the end of the slideshow3, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('caption3'))? $('#gallery3 a:first') :current.next()) : $('#gallery3 a:first'));	
+	
+	//Get next image caption3
+	var caption3 = next.find('img').attr('rel');	
+	
+	//Set the fade in effect for the next image, show3 class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show3')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show3');
+	
+	//Set the opacity to 0 and height to 1px
+	$('#gallery3 .caption3').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+	
+	//Animate the caption3, opacity to 0.7 and heigth to 100px, a slide up effect
+	$('#gallery3 .caption3').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+	
+	//Display the cont3
+	$('#gallery3 .cont3').html(caption3);
+	
+	
+}
+
+//slide4
+		$(document).ready(function() {		
+			
+			//Execute the slideshow4
+			slideshow4();
+
+		});
+
+		function slideshow4() {
+
+			//Set the opacity of all images to 0
+			$('#gallery4 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery4 a:first').css({opacity: 1.0});
+			
+			//Set the caption4 background to semi-transparent
+			$('#gallery4 .caption4').css({opacity: 0.7});
+
+			//Resize the width of the caption4 according to the image width
+			$('#gallery4 .caption4').css({width: $('#gallery4 a').find('img').css('width')});
+			
+			//Get the caption4 of the first image from REL attribute and display it
+			$('#gallery4 .cont4').html($('#gallery4 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery4 function to run the slideshow4, 6000 = change to next image after 6 seconds
+			setInterval('gallery4()',6000);
+			
+		}
+
+		function gallery4() {
+			
+			//if no IMGs have the show4 class, grab the first image
+			var current = ($('#gallery4 a.show4')?  $('#gallery4 a.show4') : $('#gallery4 a:first'));
+
+			//Get next image, if it reached the end of the slideshow4, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption4'))? $('#gallery4 a:first') :current.next()) : $('#gallery4 a:first'));	
+			
+			//Get next image caption4
+			var caption4 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show4 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show4')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show4');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery4 .caption4').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption4, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery4 .caption4').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont4
+			$('#gallery4 .cont4').html(caption4);
+			
+			
+		}
+
+//slide5
+		$(document).ready(function() {		
+			
+			//Execute the slideshow5
+			slideshow5();
+
+		});
+
+		function slideshow5() {
+
+			//Set the opacity of all images to 0
+			$('#gallery5 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery5 a:first').css({opacity: 1.0});
+			
+			//Set the caption5 background to semi-transparent
+			$('#gallery5 .caption5').css({opacity: 0.7});
+
+			//Resize the width of the caption5 according to the image width
+			$('#gallery5 .caption5').css({width: $('#gallery5 a').find('img').css('width')});
+			
+			//Get the caption5 of the first image from REL attribute and display it
+			$('#gallery5 .cont5').html($('#gallery5 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery5 function to run the slideshow5, 6000 = change to next image after 6 seconds
+			setInterval('gallery5()',6000);
+			
+		}
+
+		function gallery5() {
+			
+			//if no IMGs have the show5 class, grab the first image
+			var current = ($('#gallery5 a.show5')?  $('#gallery5 a.show5') : $('#gallery5 a:first'));
+
+			//Get next image, if it reached the end of the slideshow5, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption5'))? $('#gallery5 a:first') :current.next()) : $('#gallery5 a:first'));	
+			
+			//Get next image caption5
+			var caption5 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show5 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show5')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show5');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery5 .caption5').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption5, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery5 .caption5').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont5
+			$('#gallery5 .cont5').html(caption5);
+			
+			
+		}
+
+		
+//slide6
+		$(document).ready(function() {		
+			
+			//Execute the slideshow6
+			slideshow6();
+
+		});
+
+		function slideshow6() {
+
+			//Set the opacity of all images to 0
+			$('#gallery6 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery6 a:first').css({opacity: 1.0});
+			
+			//Set the caption6 background to semi-transparent
+			$('#gallery6 .caption6').css({opacity: 0.7});
+
+			//Resize the width of the caption6 according to the image width
+			$('#gallery6 .caption6').css({width: $('#gallery6 a').find('img').css('width')});
+			
+			//Get the caption6 of the first image from REL attribute and display it
+			$('#gallery6 .cont6').html($('#gallery6 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery6 function to run the slideshow6, 6000 = change to next image after 6 seconds
+			setInterval('gallery6()',6000);
+			
+		}
+
+		function gallery6() {
+			
+			//if no IMGs have the show6 class, grab the first image
+			var current = ($('#gallery6 a.show6')?  $('#gallery6 a.show6') : $('#gallery6 a:first'));
+
+			//Get next image, if it reached the end of the slideshow6, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption6'))? $('#gallery6 a:first') :current.next()) : $('#gallery6 a:first'));	
+			
+			//Get next image caption6
+			var caption6 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show6 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show6')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show6');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery6 .caption6').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption6, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery6 .caption6').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont6
+			$('#gallery6 .cont6').html(caption6);
+			
+			
+		}
+
+//slide7
+		$(document).ready(function() {		
+			
+			//Execute the slideshow7
+			slideshow7();
+
+		});
+
+		function slideshow7() {
+
+			//Set the opacity of all images to 0
+			$('#gallery7 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery7 a:first').css({opacity: 1.0});
+			
+			//Set the caption7 background to semi-transparent
+			$('#gallery7 .caption7').css({opacity: 0.7});
+
+			//Resize the width of the caption7 according to the image width
+			$('#gallery7 .caption7').css({width: $('#gallery7 a').find('img').css('width')});
+			
+			//Get the caption7 of the first image from REL attribute and display it
+			$('#gallery7 .cont7').html($('#gallery7 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery7 function to run the slideshow7, 6000 = change to next image after 6 seconds
+			setInterval('gallery7()',6000);
+			
+		}
+
+		function gallery7() {
+			
+			//if no IMGs have the show7 class, grab the first image
+			var current = ($('#gallery7 a.show7')?  $('#gallery7 a.show7') : $('#gallery7 a:first'));
+
+			//Get next image, if it reached the end of the slideshow7, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption7'))? $('#gallery7 a:first') :current.next()) : $('#gallery7 a:first'));	
+			
+			//Get next image caption7
+			var caption7 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show7 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show7')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show7');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery7 .caption7').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption7, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery7 .caption7').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont7
+			$('#gallery7 .cont7').html(caption7);
+			
+			
+		}
+
+//slide8
+		$(document).ready(function() {		
+			
+			//Execute the slideshow8
+			slideshow8();
+
+		});
+
+		function slideshow8() {
+
+			//Set the opacity of all images to 0
+			$('#gallery8 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery8 a:first').css({opacity: 1.0});
+			
+			//Set the caption8 background to semi-transparent
+			$('#gallery8 .caption8').css({opacity: 0.7});
+
+			//Resize the width of the caption8 according to the image width
+			$('#gallery8 .caption8').css({width: $('#gallery8 a').find('img').css('width')});
+			
+			//Get the caption8 of the first image from REL attribute and display it
+			$('#gallery8 .cont8').html($('#gallery8 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery8 function to run the slideshow8, 6000 = change to next image after 6 seconds
+			setInterval('gallery8()',6000);
+			
+		}
+
+		function gallery8() {
+			
+			//if no IMGs have the show8 class, grab the first image
+			var current = ($('#gallery8 a.show8')?  $('#gallery8 a.show8') : $('#gallery8 a:first'));
+
+			//Get next image, if it reached the end of the slideshow8, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption8'))? $('#gallery8 a:first') :current.next()) : $('#gallery8 a:first'));	
+			
+			//Get next image caption8
+			var caption8 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show8 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show8')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show8');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery8 .caption8').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption8, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery8 .caption8').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont8
+			$('#gallery8 .cont8').html(caption8);
+			
+			
+		}
+
+//slide9
+		$(document).ready(function() {		
+			
+			//Execute the slideshow9
+			slideshow9();
+
+		});
+
+		function slideshow9() {
+
+			//Set the opacity of all images to 0
+			$('#gallery9 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery9 a:first').css({opacity: 1.0});
+			
+			//Set the caption9 background to semi-transparent
+			$('#gallery9 .caption9').css({opacity: 0.7});
+
+			//Resize the width of the caption9 according to the image width
+			$('#gallery9 .caption9').css({width: $('#gallery9 a').find('img').css('width')});
+			
+			//Get the caption9 of the first image from REL attribute and display it
+			$('#gallery9 .cont9').html($('#gallery9 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery9 function to run the slideshow9, 6000 = change to next image after 6 seconds
+			setInterval('gallery9()',6000);
+			
+		}
+
+		function gallery9() {
+			
+			//if no IMGs have the show9 class, grab the first image
+			var current = ($('#gallery9 a.show9')?  $('#gallery9 a.show9') : $('#gallery9 a:first'));
+
+			//Get next image, if it reached the end of the slideshow9, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption9'))? $('#gallery9 a:first') :current.next()) : $('#gallery9 a:first'));	
+			
+			//Get next image caption9
+			var caption9 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show9 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show9')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show9');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery9 .caption9').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption9, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery9 .caption9').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont9
+			$('#gallery9 .cont9').html(caption9);
+			
+			
+		}
+
+//slide10
+		$(document).ready(function() {		
+			
+			//Execute the slideshow10
+			slideshow10();
+
+		});
+
+		function slideshow10() {
+
+			//Set the opacity of all images to 0
+			$('#gallery10 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery10 a:first').css({opacity: 1.0});
+			
+			//Set the caption10 background to semi-transparent
+			$('#gallery10 .caption10').css({opacity: 0.7});
+
+			//Resize the width of the caption10 according to the image width
+			$('#gallery10 .caption10').css({width: $('#gallery10 a').find('img').css('width')});
+			
+			//Get the caption10 of the first image from REL attribute and display it
+			$('#gallery10 .cont10').html($('#gallery10 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery10 function to run the slideshow10, 6000 = change to next image after 6 seconds
+			setInterval('gallery10()',6000);
+			
+		}
+
+		function gallery10() {
+			
+			//if no IMGs have the show10 class, grab the first image
+			var current = ($('#gallery10 a.show10')?  $('#gallery10 a.show10') : $('#gallery10 a:first'));
+
+			//Get next image, if it reached the end of the slideshow10, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption10'))? $('#gallery10 a:first') :current.next()) : $('#gallery10 a:first'));	
+			
+			//Get next image caption10
+			var caption10 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show10 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show10')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show10');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery10 .caption10').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption10, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery10 .caption10').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont10
+			$('#gallery10 .cont10').html(caption10);
+			
+			
+		}	
+	
+//slide11
+		$(document).ready(function() {		
+			
+			//Execute the slideshow11
+			slideshow11();
+
+		});
+
+		function slideshow11() {
+
+			//Set the opacity of all images to 0
+			$('#gallery11 a').css({opacity: 0.0});
+			
+			//Get the first image and display it (set it to full opacity)
+			$('#gallery11 a:first').css({opacity: 1.0});
+			
+			//Set the caption11 background to semi-transparent
+			$('#gallery11 .caption11').css({opacity: 0.7});
+
+			//Resize the width of the caption11 according to the image width
+			$('#gallery11 .caption11').css({width: $('#gallery11 a').find('img').css('width')});
+			
+			//Get the caption11 of the first image from REL attribute and display it
+			$('#gallery11 .cont11').html($('#gallery11 a:first').find('img').attr('rel'))
+			.animate({opacity: 0.7}, 400);
+			
+			//Call the gallery11 function to run the slideshow11, 6000 = change to next image after 6 seconds
+			setInterval('gallery11()',6000);
+			
+		}
+
+		function gallery11() {
+			
+			//if no IMGs have the show11 class, grab the first image
+			var current = ($('#gallery11 a.show11')?  $('#gallery11 a.show11') : $('#gallery11 a:first'));
+
+			//Get next image, if it reached the end of the slideshow11, rotate it back to the first image
+			var next = ((current.next().length) ? ((current.next().hasClass('caption11'))? $('#gallery11 a:first') :current.next()) : $('#gallery11 a:first'));	
+			
+			//Get next image caption11
+			var caption11 = next.find('img').attr('rel');	
+			
+			//Set the fade in effect for the next image, show11 class has higher z-index
+			next.css({opacity: 0.0})
+			.addClass('show11')
+			.animate({opacity: 1.0}, 1000);
+
+			//Hide the current image
+			current.animate({opacity: 0.0}, 1000)
+			.removeClass('show11');
+			
+			//Set the opacity to 0 and height to 1px
+			$('#gallery11 .caption11').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+			
+			//Animate the caption11, opacity to 0.7 and heigth to 100px, a slide up effect
+			$('#gallery11 .caption11').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+			
+			//Display the cont11
+			$('#gallery11 .cont11').html(caption11);
+			
+			
+		}	
+	
+		</script>
+	
+	</head>
+	
+	<body>
+
+		<div id = content>
+		<!--INDEX-->
+			<div class = section>
+				<ul>
+					<li class = "sub" id = "index">
+						<h3>
+							Where to find your coffee needs on campus
+						</h3>
+					
+						<nav id = "homenav">
+							<ul>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+						
+						<p>
+							Vivian Ho | DES 117 | Explore-It!
+						</p>
+					</li>
+				</ul>
+			</div>
+			
+		<!--BIOBREW-->
+			<div class = section>
+				<ul>
+					<li class = "sub" id = "biobrew">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+						
+<div id="gallery">
+
+	<a href="#" class="show">
+		<img src="images/slide/bio1.jpg" alt="Sci Lab" width="580" height="360" title="" alt="" rel="<h3>Sci Lab</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/bio2.jpg" alt="Counter" width="580" height="360" title="" alt="" rel="<h3>Counter</h3>"/>
+	</a>
+	
+	<div class="caption"><div class="cont"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Sciences Laboratory Building
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:45am-7:00pm
+							<br>
+							Friday | 7:45am-5:00pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							<br><br>
+							Bio Brew opened in Fall 2005 and is run by Sodexho.  Their drink selection includes, coffee, espresso drinks, Tazo teas, Island Oasis smoothies, and bottled drinks.  They also serve food items such as pastries, sandwiches, cookies, salads, chips, and more.  This location is pretty popular amongst students who have class in the building despite most of the classrooms not allowing food inside.
+						</p>
+					</li>
+				</ul>
+			</div>
+			
+			
+		<!--CARGO COFFEE-->
+			<div class = "section">
+				<ul>
+					<li class = "sub" id = "cargocoffee">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+						
+<div id="gallery2">
+
+	<a href="#" class="show2">
+		<img src="images/slide/academic2.jpg" alt="Academic Surge" width="580" height="360" title="" alt="" rel="<h3>Academic Surge</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/king2.jpg" alt="King Hall" width="580" height="360" title="" alt="" rel="<h3>King Hall</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/olson1.jpg" alt="Olson Hall" width="580" height="360" title="" alt="" rel="<h3>Olson Hall</h3>"/>
+	</a>
+
+	<div class="caption2"><div class="cont2"></div></div>
+</div>
+<div class="clear"></div>
+
+						<p>
+							Cargo Coffee is a coffee stand business that is privately owned by a local couple.  Their three stands offer the usual: a variety of drip coffees, espresso drinks, and fruit juices.  They also serve a decent variety of breakfast pastries, bagels, and quiches (supplied from the Bella Bru Cafe in Sacramento).  In the winter months, they also serve soup.
+						</p>
+						
+						<nav class = "sectnav">
+							<a href = "#academic">Academic Surge</a> &nbsp;|&nbsp
+							<a href = "#king">King Hall</a>&nbsp;|&nbsp
+							<a href = "#olson">Olson Hall</a>
+							
+						</nav>
+					</li>
+					
+					<li class = "sub" id = "academic">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery3">
+
+	<a href="#" class="show3">
+		<img src="images/slide/academic1.jpg" alt="Side View" width="580" height="360" title="" alt="" rel="<h3>Side View</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/academic2.jpg" alt="Front View" width="580" height="360" title="" alt="" rel="<h3>Front View</h3>"/>
+	</a>
+	
+	<div class="caption3"><div class="cont3"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Between Academic Surge and Ghausi Hall
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:30am-4:30pm
+							<br>
+							Friday | 7:30am-3:30pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							<br><br>
+							There used to be a Cargo Coffee stand in front of the Sciences Laboratory Building but the opening of <span style = "text-decoration: underline;"><a href = #biobrew>Bio Brew</a></span> forced the stand to move and open a location in this area instead.
+							
+						</p>
+						
+						<nav class = "sectnav">
+							<a href = "#academic">Academic Surge</a> &nbsp;|&nbsp
+							<a href = "#king">King Hall</a>&nbsp;|&nbsp
+							<a href = "#olson">Olson Hall</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "king">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+						
+<div id="gallery4">
+
+	<a href="#" class="show4">
+		<img src="images/slide/king1.jpg" alt="King Hall" width="580" height="360" title="" alt="" rel="<h3>King Hall</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/king2.jpg" alt="New Trailer" width="580" height="360" title="" alt="" rel="<h3>New Trailer</h3>"/>
+	</a>
+	
+	<div class="caption4"><div class="cont4"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Outside King Hall
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:30am-4:30pm
+							<br>
+							Friday | 7:30am-3:30pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							<br><br>
+
+							On April 30, 2005, the stand at King Hall burned down at about 6 o'clock in the morning.  It was a suspicious event and the fire investigators spent the day inspecting the incident.  It happened to be the first day of finals for the law students so rumor has it that the law students set the stand on fire in some kind of protest.
+							
+							<br><br>
+							In February 2011, the King Hall stand was replaced with a new trailer and has continued to serve coffee since.
+						</p>
+						
+						<nav class = "sectnav">
+
+							<a href = "#academic">Academic Surge</a> &nbsp;|&nbsp
+							<a href = "#king">King Hall</a>&nbsp;|&nbsp
+							<a href = "#olson">Olson Hall</a>
+						</nav>						
+					</li>
+					<li class = "sub" id = "olson">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+
+		<img src="images/slide/olson1.jpg" id = "olsonpic" alt="Front View" width="580" height="360" title="" alt="" rel="<h3>Front View</h3>"/>
+
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Between Olson Hall and Sproul Hall
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:30am-4:30pm
+							<br>
+							Friday | 7:30am-3:30pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							
+						</p>
+						<nav class = "sectnav">
+							<a href = "#academic">Academic Surge</a> &nbsp;|&nbsp
+							<a href = "#king">King Hall</a>&nbsp;|&nbsp
+							<a href = "#olson">Olson Hall</a>
+						</nav>
+					</li>
+				</ul>
+			</div>
+			
+		<!--COHO-->
+			<div class = "section">
+				<ul>
+					<li class = "sub" id = "coho">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery5">
+
+	<a href="#" class="show5">
+		<img src="images/slide/mu2.jpg" alt="Memorial Union" width="580" height="360" title="" alt="" rel="<h3>Memorial Union</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/scc2.jpg" alt="Student Community Center" width="580" height="360" title="" alt="" rel="<h3>SCC</h3>"/>
+	</a>
+	
+
+	<div class="caption5"><div class="cont5"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<nav class = "sectnav">
+
+							<a href = "#mu">Memorial Union</a>&nbsp|&nbsp
+							<a href = "#scc">Student Community Center</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "mu">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery6">
+
+	<a href="#" class="show6">
+		<img src="images/slide/mu2.jpg" alt="Sign" width="580" height="360" title="" alt="" rel="<h3>Sign</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/mu1.jpg" alt="Single Iced Mocha" width="580" height="360" title="" alt="" rel="<h3>Single Iced Mocha</h3> "/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/mu3.jpg" alt="Microwave" width="580" height="360" title="" alt="" rel="<h3>Microwave</h3>"/>
+	</a>
+
+
+	<div class="caption6"><div class="cont6"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Memorial Union
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:00am-10:00pm
+							<br>
+							Friday | 7:00am-5:00pm
+							<br>
+							Saturday | 10:00am-5:00pm
+							<br>
+							Sunday | Closed
+						
+							<br><br>
+							
+							Coffee at the Memorial Union can be found at Swirlz Bakery.  On one side of the bar, they sell coffee, espresso and a variety of freshly baked goods.  On the other side, they sell frozen yogurt, ice cream, fruit smoothies, and milkshakes (a recent addiion).
+							
+						</p>
+						
+						<nav class = "sectnav">
+							<a href = "#mu">Memorial Union</a>&nbsp|&nbsp
+							<a href = "#scc">Student Community Center</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "scc">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+						
+
+						
+<div id="gallery7">
+
+	<a href="#" class="show7">
+		<img src="images/slide/scc1.jpg" alt="Cafe" width="580" height="360" title="" alt="" rel="<h3>Cafe</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/scc2.jpg" alt="Front View" width="580" height="360" title="" alt="" rel="<h3>Front View</h3>"/>
+	</a>
+	
+	<div class="caption7"><div class="cont7"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Student Community Center
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:30am-7:00pm
+							<br>
+							Friday | 7:30am-5:00pm
+							<br>
+							Saturday-Sunday | Closed
+							<br>
+							<em>Summer 2012 Hours</em>:
+							<br>
+							Monday-Friday | 7:30am-5:00pm 
+						
+							<br><br>
+							
+							The South Cafe at the Student Community Center is a small extension of the <span style = "text-decoration: underline;"><a href = #coho>CoHo</a></span> at the Memorial Union.  They offer mostly the same things as the coffee side of Swirlz Bakery.  In addition, the South Cafe has a signature item, the Chili Stack.  The Chili Stack is chili layered with slices of cornbread, a family favorite of the main food service manager at the CoHo.
+							
+						</p>
+
+						<nav class = "sectnav">
+							<a href = "#mu">Memorial Union</a>&nbsp|&nbsp
+							<a href = "#scc">Student Community Center</a>
+						</nav>
+					</li>
+				</ul>
+			</div>
+			
+		<!--STARBUCKS-->
+			<div class = "section">
+				<ul>
+					<li class = "sub" id = "starbucks">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery8">
+
+	<a href="#" class="show8">
+		<img src="images/slide/arc1.jpg" alt="ARC" width="580" height="360" title="" alt="" rel="<h3>ARC</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/silo3.jpg" alt="Silo" width="580" height="360" title="" alt="" rel="<h3>Silo</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/scrubs1.jpg" alt="Scrubs Cafe" width="580" height="360" title="" alt="" rel="<h3>Scrubs Cafe</h3>"/>
+	</a>
+
+
+	<div class="caption8"><div class="cont8"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<nav class = "sectnav">
+
+							<a href = "#arc">Activities and Recreation Center</a>&nbsp|&nbsp
+							<a href = "#silo">Silo</a>&nbsp|&nbsp
+							<a href = "#scrubs">Scrubs Cafe</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "arc">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery9">
+
+	<a href="#" class="show9">
+		<img src="images/slide/arc1.jpg" alt="Front View" width="580" height="360" title="" alt="" rel="<h3>Front View</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/arc2.jpg" alt="Next to ARC" width="580" height="360" title="" alt="" rel="<h3>Next to ARC</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/arc3.jpg" alt="Sign" width="580" height="360" title="" alt="" rel="<h3>Sign</h3>"/>
+	</a>
+
+
+	<div class="caption9"><div class="cont9"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Activities and Recreation Center
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:00am-1:00am
+							<br>
+							Friday | 7:00am-9:00pm
+							<br>
+							Saturday | 8:00am-9:00pm
+							<br>
+							Sunday | 9:00am-12:00am
+
+							
+						</p>
+						
+						<nav class = "sectnav">
+							<a href = "#arc">Activities and Recreation Center</a>&nbsp|&nbsp
+							<a href = "#silo">Silo</a>&nbsp|&nbsp
+							<a href = "#scrubs">Scrubs Cafe</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "silo">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery10">
+
+	<a href="#" class="show10">
+		<img src="images/slide/silo1.jpg" alt="Outdoor Seating" width="580" height="360" title="" alt="" rel="<h3>Outdoor Seating</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/silo2.jpg" alt="Inside" width="580" height="360" title="" alt="" rel="<h3>Inside</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/silo3.jpg" alt="Front" width="580" height="360" title="" alt="" rel="<h3>Front</h3>"/>
+	</a>
+
+
+
+	<div class="caption10"><div class="cont10"></div></div>
+</div>
+<div class="clear"></div>
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Silo
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:00am-8:00pm
+							<br>
+							Friday | 7:00am-6:00pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							<br><br>
+							The Silo Union was recently remodeled and an official Starbucks replaced Brennan's Coffee and Silo Sandwiches.  The change is well received though as the is usually a decent line for Starbucks.
+							
+						</p>
+						
+						<nav class = "sectnav">
+
+							<a href = "#arc">Activities and Recreation Center</a>&nbsp|&nbsp
+							<a href = "#silo">Silo</a>&nbsp|&nbsp
+							<a href = "#scrubs">Scrubs Cafe</a>
+						</nav>
+					</li>
+					<li class = "sub" id = "scrubs">
+						
+						<nav class = "pagenav">
+							<ul>
+								<li><a href = "#index">Home</a></li>
+								<li><a href = "#biobrew">Bio Brew</a></li>
+								<li><a href = "#cargocoffee">Cargo Coffee</a></li>
+								<li><a href = "#coho">Coffee House</a></li>
+								<li><a href = "#starbucks">Starbucks</a></li>
+								<li><a href = "#map">Map</a></li>
+							</ul>
+						</nav>
+
+						
+<div id="gallery11">
+
+	<a href="#" class="show11">
+		<img src="images/slide/scrubs1.jpg" alt="Front Door" width="580" height="360" title="" alt="" rel="<h3>Front Door</h3>"/>
+	</a>
+	
+	<a href="#">
+		<img src="images/slide/scrubs2.jpg" alt="Medical Sciences" width="580" height="360" title="" alt="" rel="<h3>Medical Sciences</h3>"/>
+	</a>
+	
+	<div class="caption11"><div class="cont11"></div></div>
+</div>
+<div class="clear"></div>
+
+						
+						<p>
+							<span style = "color:#78B3A4;">Location</span>: Health Sciences Complex
+							<br><br>
+							<span style = "color:#78B3A4;">Hours</span>:
+							<br>
+							Monday-Thursday | 7:00am-5:00pm
+							<br>
+							Friday | 7:00am-3:00pm
+							<br>
+							Saturday-Sunday | Closed
+							<br>
+							<em>Summer 2012 Hours</em>:
+							<br>
+							Monday-Friday | 7:00am-2:30pm
+							<br>
+							Saturday-Sunday | Closed
+						
+							<br><br>
+							Scrubs Cafe is not an officially registered Starbucks, but they do serve Starbucks coffee.  In addition, they also sell pastries, cookies, and other breakfast foods.
+							
+						</p>
+						
+						<nav class = "sectnav">
+							<a href = "#arc">Activities and Recreation Center</a>&nbsp|&nbsp
+							<a href = "#silo">Silo</a>&nbsp|&nbsp
+							<a href = "#scrubs">Scrubs Cafe</a>
+						</nav>
+					</li>
+				</ul>
+			</div>
+			
+		<!--MAP-->
+			<div class = "section">
+				<ul>
+					<li class = "sub" id = "map">
+						
+						 <div id="image-hotspot">
+							<a id="bb" href="#biobrew">Bio<br>Brew</a>
+							<a id="cc1" href="#academic">A.<br>Surge</a>
+							<a id="cc2" href="#king">King<br>Hall</a>
+							<a id="cc3" href="#olson">Olson<br>Hall</a>
+							<a id="ch1" href="#mu">MU</a>
+							<a id="ch2" href="#scc">SCC</a>
+							<a id="s1" href="#arc">ARC</a>
+							<a id="s2" href="#silo">Silo</a>
+							<a id="s3" href="#scrubs">Scrubs</a>
+						</div>
+						
+						
+						<nav class = "sectnav" id = "mapnav">
+							<a href = "#index">Home</a>
+						</nav>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

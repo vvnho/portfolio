@@ -1,0 +1,81 @@
+/***RESUME PAGE***/
+
+header {
+	margin: 0 auto;
+}
+
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	color: #BE1E20;
+	margin-bottom: 5px;
+	margin-top: 50px;
+}	
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	color: #4d4d4d;
+	line-height: 1.5;
+	margin-bottom: 25px;
+}
+
+a {
+	color: #BE1E20;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+
+#inner {
+	margin-top: 50px;
+}
+
+#leftcolumn {
+	width: 410px;
+	float: left;
+/* 	border: 1px solid blue; */
+	margin-bottom: 50px;
+}
+
+#rightcolumn {
+	width: 410px; 
+	float: right;
+	margin-bottom: 50px;
+}
+
+/*** TYPOGRAPHY STYLES ***/
+ul {
+	margin-top: -25px;
+	margin-left: -10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	color: #4d4d4d;
+	width: 410px; 
+	line-height: 1.5;
+	list-style-type: none;
+	padding-left: 0.75em;
+	text-indent: -0.75em;
+}	
+
+ul li:before {
+	content: "\002B\0020";
+}
+
+.ul2 {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.ul2 li:before {
+	content: "- ";
+}
+
+.red {
+	color: #BE1E20;
+}

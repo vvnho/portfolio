@@ -1,0 +1,176 @@
+body {
+min-height: 800px;
+max-width: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+#container {
+	width: 900px;
+	margin: 0 auto;
+
+	}	
+	
+@font-face{ 
+	font-family: 'roboto'; 
+	src: url('../fonts/roboto.eot'); 
+	src: url('../fonts/roboto.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/roboto.woff') format('woff'), 
+		url('../fonts/roboto.ttf') format('truetype'), 
+		url('../fonts/roboto.svg#webfont') format('svg'); 
+	
+	}
+
+
+@font-face {
+    font-family: 'robotolight_italic';
+    src: url('../fonts/Roboto-LightItalic-webfont.eot');
+    src: url('../fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-LightItalic-webfont.svg#robotolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;	
+ }
+	
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('../fonts/texgyreadventor-regular-webfont.eot');
+    src: url('../fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+	}
+	
+	
+@font-face {
+    font-family: 'texgyreadventorbold';
+    src: url('../fonts/texgyreadventor-bold-webfont.eot');
+    src: url('../fonts/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor-bold-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor-bold-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+	
+header {
+	z-index:100;
+	position: fixed; 
+	width: 2000px;
+	border-style: none;
+	height: 20px; 
+	background-color: #bd202e;
+	margin-top: -140px;
+	margin-left: -510px;
+	}
+	
+#banner {
+	z-index:98;
+	position: fixed; 
+	width: 1300px;
+	border-style: none;
+	height: 104px; 
+	background-color: #ffffff;
+	margin-top: -140px;
+	margin-left: -210px;
+	}
+
+
+	
+header img {
+	position: fixed;
+	padding-left: 40px;
+	padding-top: 40px;
+	margin-left: 510px;
+	}
+	
+
+.navi:hover{
+	color: #00b4a4;
+}
+
+#navigation{
+    font-family: 'texgyreadventorbold';
+	width: 800px;
+	font-size:15px;
+	margin-left: 215px;
+	margin-top: -120px;
+	padding-top: 20px;
+	background-color: white;
+	position:fixed;
+	z-index:99;
+}
+#navigation ul {
+    height: auto;
+    padding-left: 20px;
+    margin-top: 25px;
+	margin-left:-50px;
+	}
+
+#navigation li{
+	display:inline;
+	padding-left: 50px;
+}
+
+
+
+.navi a{
+    color: #bd202e;
+    display: inline-block;
+	text-decoration: none;
+    color: #000000;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+	}
+	
+a:visited {color:#000000;}
+
+.navi a:hover {
+	color:#00b4a4;
+	}
+a:active {
+	color:#000000;
+	}
+	
+
+
+	
+	
+	
+p { font-family: 'roboto', Arial, sans-serif; 
+	margin-left: 233px;
+	width: 610px;
+	line-height: 125%;
+	font-size: 13px;
+
+}
+
+
+h1 {
+    font-family: 'texgyreadventorbold';
+	margin-left: 230px;
+	margin-top: 135px;
+	color: #00b4a4;
+	min-width: 500px;
+	font-size: 30px;
+	}
+	
+h2 {
+    font-family: 'texgyreadventorbold';
+	margin-left: 230px;
+	margin-bottom: 0px;
+    color: #000000;
+	min-width: 500px;
+	font-size:20px;
+	}
+
+
+	

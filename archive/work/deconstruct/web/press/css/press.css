@@ -1,0 +1,55 @@
+.italic {
+   font-family: 'robotolight_italic';
+   }
+
+
+#good, #bitch, #bust {
+	margin-top: 20px;
+	}
+
+	
+#demo, #npr, #ellen {
+	margin-top: 225px;
+	}
+	
+#good {
+	position: absolute;
+	margin-left: 232px;
+	}
+	
+#bitch {
+	position: absolute;
+	margin-left: 452px;
+	}
+	
+#bust {
+	position: absolute;
+	margin-left: 672px;
+	}
+	
+#demo {
+	position: absolute;
+	margin-left: 232px;
+	}
+	
+#npr {
+	position: absolute;
+	margin-left: 452px;
+	}
+	
+#ellen {
+	position: absolute;
+	margin-left: 672px;
+	}
+	
+.press a{
+    display: inline-block;
+	text-decoration: none;
+    color: #bd202e;
+
+	}
+	
+.press a:hover {
+	color:#bd202e; 
+	}
+	

@@ -1,0 +1,61 @@
+	
+img.helen {
+	position: absolute;
+	margin-left: 232px;
+	}
+	
+img.trisha {
+	position: absolute;
+	margin-left:  452px;
+	}
+	
+img.vivian {
+	position: absolute;
+	margin-left: 672px;
+	}
+
+	
+#one, #two, #three {
+	font-family: 'texgyreadventorregular';
+	position: absolute;
+	margin-top: 160px;
+	width: 155px;
+	}
+
+#two , #twodesc {
+	margin-left: 452px;
+	}
+	
+#three, #threedesc {
+	margin-left: 672px;
+	}
+
+#onedesc, #twodesc, #threedesc {
+	font-family: 'roboto'; 
+	position: absolute;
+	margin-top: 175px;
+	}
+	
+#gap {
+	margin-top: 40px;
+	}
+	
+	
+#team {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+	
+	
+.about a{
+
+    display: inline-block;
+	text-decoration: none;
+    color: #bd202e;
+
+	}
+	
+.about a:hover {
+	color:#bd202e; 
+	}

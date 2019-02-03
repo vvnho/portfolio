@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset = "UTAF-8"/>
+	
+	<meta name="author" content="Vivian Ho" />
+	<meta name="copyright" content="(c) 2014 Vivian Ho">
+	
+	<title>Vivian Ho | Spiral Counter</title>
+
+	<link rel = "icon"
+		type = "image/png"
+		href = "../images/fav1.png"
+	>	
+	<link href='../css/base.css' type='text/css' rel='stylesheet' />
+	<link href='../css/work2.css' type='text/css' rel='stylesheet' />
+	
+	<script src = "../js/jquery-1.7.1.min.js"></script>
+	
+	<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="../css/default/default.css" type="text/css" />
+	<script src="../js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+	<script src="../js/slider.js" type="text/javascript"></script>
+	
+	<script src="../js/processing.js" type="text/javascript"></script>
+	
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800,700,300' rel='stylesheet' type='text/css'>
+
+	<style>
+		header {
+			display: block;
+			float: left;
+			position: fixed;
+			text-align: left;
+			width: 100%;
+			height: auto;
+			margin-left: 225px;
+			padding-bottom: 25px;
+			background-color: rgba(254,255,238,0.75);
+			top: 0;
+			z-index: 90;
+			border: none;
+		}
+		
+		#container {
+			margin-top: 125px;
+			margin-left: 225px;
+			padding-left: 0px;
+		}
+		
+		nav {
+			top: 0;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('#slider').nivoSlider();
+		});
+	</script>	
+	
+</head>
+
+<body>
+
+	<nav>
+		<img src = "../images/initials.png">
+		<h1>
+			Vivian Ho
+		</h1>
+		
+		<h2>
+			<a href = "../index.html">WORK</a>
+		</h2>
+		<h2>
+			<a href = "../about.html">ABOUT</a>
+		</h2>
+		
+	</nav>
+
+	<header>
+		<h3>
+			SPIRAL COUNTER
+		</h3>
+	</header>
+	
+	<div id = "container">
+		<p>
+			Through the use of Processing, an open source programming language for a digital sketchbook of sorts, I created a primitive form of data visualization where my code would analyze content depending on the input type. 
+			<br /><br />
+			Upon running, the code will open two seperate windows: a control panel and a drawing window. From the control dock, the user can specify parameters that will chage the output onto the drawing window. The resulting arcs revolve around the center of the drawing window. 
+		</p>
+		
+		<canvas data-processing-sources="spirals/final_1/final_1.pde"></canvas>
+		
+	</div>
+	
+	<footer>
+		<a href = "mailto: hello@vvnho.com" target = "_blank"><div id = "emailnav"></div></a>
+	</footer>
+	
+</body>
+</html>
